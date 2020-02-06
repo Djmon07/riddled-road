@@ -4,11 +4,11 @@ class Map(object):
 
     scene = {
         'startscene': scene.StartScene(),
-        'barn': scene.Barn(),
-        'death': scene.Death(),
         'road': scene.Road(),
+        'barn': scene.Barn(),
         'path': scene.Path(),
         'bridge': scene.Bridge(),
+        'death': scene.Death(),
         'finished': scene.Finished()
     }
 

@@ -83,11 +83,15 @@ class Barn(Scene):
             print("You sneak through the corn feild and back onto the road.")
             return 'path'
 
-        else user_input == '3':
+        elif user_input == '3':
             print("You make a dash out the door in the front directly at the farmer.")
             print("He has a shot gun, but seems to be slow to the draw.")
             print("Running into him he lost his balence allowing you to safly get away.")
             return 'path'
+
+        else:
+            print("You cluck like a chicken, yet the farmer is not fooled. BANG!!")
+            return 'death'
 
 class Path(Scene):
 
@@ -104,10 +108,10 @@ class Path(Scene):
             print("Explaining what had happened so far, and he agrees.")
             print("You start going down stream trying to make your way acrose the rapids.")
             print("The boat engine roaring, yet not powerful enough.")
-            print("You go down steam untill you go over a water fall".)
+            print("You go down steam untill you go over a water fall.")
             return 'death'
 
-        if user_input == '2':
+        elif user_input == '2':
             print("You decide to wait hoping someone would show up and get the bridge working.")
             print("A few hours pass you begin to wonder if this was a good idea")
             print("..........................")
@@ -116,10 +120,10 @@ class Path(Scene):
             print("..........................")
             print("..........................")
             print("Finaly someone comes to the rescue sadly they cannot fix the bridge but,")
-            print("They can take you accrost on a cable car".)
+            print("They can take you accrost on a cable car.")
             return 'bridge'
 
-        if user_input == '3':
+        elif user_input == '3':
             print("You decide to jump accrost the gap.")
             print("The jump is about elevan feet.")
             print("You get a running head start at the gap.")
@@ -128,17 +132,20 @@ class Path(Scene):
             print("Luckly a gust of wind pushes from below to give you the boost you need to get over.")
             return 'bridge'
 
+        else:
+            print("You decide to just jump into the water for a swim.")
+            return 'dealth'
+
 class Bridge(Scene):
 
     def enter(self):
         print("You made it to the other side finally making your home streach back to the city.")
-        return 'finish'
+        return 'finished'
 
 class Death(Scene):
 
     def enter(self):
         print("You feel your body begin to turn cold. You died!")
-        return 'death'
         exit(1)
 
 class Finished(Scene):
